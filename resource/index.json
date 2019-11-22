@@ -1,4 +1,4 @@
-callbackFuc([{
+[{
   "typeName": "掘金前端",
   "data": [{
     "url": "https://juejin.im/post/5dd75f5451882573123ce2cc",
@@ -91,4 +91,4 @@ callbackFuc([{
     "url": "https://xw.qq.com/cmsid/SPO2019112200545800",
     "text": "骚操作秀的飞起！英格拉姆假传真突把两人都骗了\n\n腾讯体育34分钟前"
   }]
-}])
+}]

@@ -5,7 +5,7 @@ module.exports = {
   // 文件操作
   fileServer: {
     // 默认保存位置
-    defaultPath: path.resolve(__dirname, '../resource/index.json'),
+    defaultPath: path.resolve(__dirname, '../html/resource.json'),
     // 写文件
     write (text, path = this.defaultPath) {
       fs.writeFileSync(path, text);

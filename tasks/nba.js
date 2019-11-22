@@ -25,6 +25,7 @@ const task = async () => {
   );
   return {
     typeName: 'NBA资讯',
+    time: new Date(),
     data: res
   }
 };

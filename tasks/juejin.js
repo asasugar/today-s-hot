@@ -39,6 +39,7 @@ const task = async () => {
   );
   return {
     typeName: '掘金前端',
+    time: new Date(),
     data: res
   }
 

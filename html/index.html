@@ -35,11 +35,11 @@
           })
 
           str += `
-      <h1>${item.typeName}</h1>
-      <ul>
-        ${listStr}
-      </ul>
-      `
+            <h1>${item.typeName}<span>抓取时间：${item.time}</span></h1>
+            <ul>
+              ${listStr}
+            </ul>
+            `
 
           $("body").html(str)
 

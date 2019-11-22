@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const { formatDateTime } = require("../tools");
 
 const task = async () => {
   // 打开chrome浏览器
@@ -25,7 +26,7 @@ const task = async () => {
   );
   return {
     typeName: 'NBA资讯',
-    time: new Date(),
+    time: formatDateTime(new Date()),
     data: res
   }
 };

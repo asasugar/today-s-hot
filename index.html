@@ -19,7 +19,7 @@
 <script>
   (function () {
     $.ajax({
-      url: "./index.json",
+      url: "./resource.json",
       dataType: "json",
       success(data) {
         let str = ''
@@ -48,32 +48,6 @@
     });
   })();
 
-  // function callbackFuc(data) {
-
-  //   let str = ''
-
-  //   $.each(data, (i, item) => {
-
-  //     let listStr = ''
-
-  //     $.each(item.data, (j, jtem) => {
-
-  //       listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
-
-  //     })
-
-  //     str += `
-  //     <h1>${item.typeName}</h1>
-  //     <ul>
-  //       ${listStr}
-  //     </ul>
-  //     `
-
-  //     $("body").html(str)
-
-  //   })
-  // }
 </script>
-<!-- <script src="../resource/index.json?callback=callbackFuc"></script> -->
 
 </html>

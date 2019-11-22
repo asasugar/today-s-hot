@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>😄</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    li {
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+</body>
+<script>
+  function callbackFuc(data) {
+
+    let str = ''
+
+    $.each(data, (i, item) => {
+
+      let listStr = ''
+
+      $.each(item.data, (j, jtem) => {
+
+        listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
+
+      })
+
+      str += `
+      <h1>${item.typeName}</h1>
+      <ul>
+        ${listStr}
+      </ul>
+      `
+
+      $("body").html(str)
+
+    })
+  }
+</script>
+<script src="../resource/index.json?callback=callbackFuc"></script>
+
+</html>

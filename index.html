@@ -17,32 +17,63 @@
 <body>
 </body>
 <script>
-  function callbackFuc(data) {
+  (function () {
+    $.ajax({
+      url: "../resource/index.json",
+      dataType: "json",
+      success(data) {
+        let str = ''
 
-    let str = ''
+        $.each(data, (i, item) => {
 
-    $.each(data, (i, item) => {
+          let listStr = ''
 
-      let listStr = ''
+          $.each(item.data, (j, jtem) => {
 
-      $.each(item.data, (j, jtem) => {
+            listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
 
-        listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
+          })
 
-      })
-
-      str += `
+          str += `
       <h1>${item.typeName}</h1>
       <ul>
         ${listStr}
       </ul>
       `
 
-      $("body").html(str)
+          $("body").html(str)
 
-    })
-  }
+        })
+      }
+    });
+  })();
+
+  // function callbackFuc(data) {
+
+  //   let str = ''
+
+  //   $.each(data, (i, item) => {
+
+  //     let listStr = ''
+
+  //     $.each(item.data, (j, jtem) => {
+
+  //       listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
+
+  //     })
+
+  //     str += `
+  //     <h1>${item.typeName}</h1>
+  //     <ul>
+  //       ${listStr}
+  //     </ul>
+  //     `
+
+  //     $("body").html(str)
+
+  //   })
+  // }
 </script>
-<script src="../resource/index.json?callback=callbackFuc"></script>
+<!-- <script src="../resource/index.json?callback=callbackFuc"></script> -->
 
 </html>

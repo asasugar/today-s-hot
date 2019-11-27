@@ -38,12 +38,12 @@ const task = async () => {
       text: el.innerText
     }))
   );
+  await browser.close()
   return {
     typeName: '掘金前端',
     time: formatDateTime(new Date()),
     data: res
   }
-
 };
 
 module.exports = task

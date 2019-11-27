@@ -33,9 +33,11 @@
           let listStr = ''
 
           $.each(item.data, (j, jtem) => {
-
-            listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
-
+            if (item.typeName === 'Vip影院') {
+              listStr += `<li>${jtem.text}:${jtem.url}</li>`
+            } else {
+              listStr += `<li><a href="${jtem.url}">${jtem.text}</a></li>`
+            }
           })
 
           str += `
@@ -45,7 +47,15 @@
               ${listStr}
             </ul>
             `
-
+          if (item.typeName === 'Vip影院') {
+            const { width, height } = window.screen;
+            str += `
+            <p>解析链接使用全民解析，此处鸣谢@全民vip视频解析<p/>
+            <iframe src="//qmaile.com/" width=${width} height=${height}>
+              <p>您的浏览器不支持  iframe 标签。</p>
+            </iframe>
+            `
+          }
           $("body").html(str)
 
         })

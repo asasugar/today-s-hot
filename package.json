@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
-    "husky": "^3.1.0"
+    "husky": "^3.1.0",
+    "shelljs": "^0.8.3"
   }
 }

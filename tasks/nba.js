@@ -24,7 +24,7 @@ const task = async () => {
       text: el.innerText,
     }))
   );
-  await browser.close()
+  await browser.close();
   return {
     typeName: 'NBA资讯',
     time: formatDateTime(new Date()),

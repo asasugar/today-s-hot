@@ -65,5 +65,4 @@ const task = async () => {
     data: res
   }
 };
-task()
 module.exports = task

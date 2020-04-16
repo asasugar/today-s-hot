@@ -3,11 +3,11 @@ const shell = require('shelljs');
 const { fileServer } = require("./tools");
 const juejinTask = require("./tasks/juejin");
 const nbaTask = require("./tasks/nba");
-const vipTask = require("./tasks/vip");
+// const vipTask = require("./tasks/vip");
 
 
 const mainTask = async () => {
-  const res = await Promise.all([juejinTask(), nbaTask(), vipTask()])
+  const res = await Promise.all([juejinTask(), nbaTask()])
   fileServer.write(JSON.stringify(res))
 }
 //每日早上10:30分定时执行一次:

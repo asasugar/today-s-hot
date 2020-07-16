@@ -10,13 +10,12 @@
 pm2 start index.js
 ```
 
-- 保存服务
-```bish
-pm2 save
-```
-
 - 把已启动服务加到systemd中
 ```bish
 pm2 startup
 ```
 
+- 保存服务
+```bish
+pm2 save
+```
